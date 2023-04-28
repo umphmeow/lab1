@@ -22,8 +22,7 @@ else:
     max_d = max(d_arr_int)
     min_d = min(d_arr_int)
     answer = (max_d + min_d) / 2
-    integer = int(answer)
-    fraction = int((answer - integer) * 100)
-    int_txt = ' '.join(dict[digit] for digit in str(integer))
-    fr_txt = ' '.join(dict[digit] for digit in str(fraction))
-    print('Ответ:', int_txt, dict['.'], fr_txt, dict[','])
+       answer_txt = ''
+    for digit in str(answer):
+            answer_txt += dict[digit] + ' '
+    print('Ответ:', answer_txt, dict[','] )
