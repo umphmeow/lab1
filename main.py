@@ -20,7 +20,10 @@ try:
             while '' in d_array:
                 d_array.remove('')
             d_arr_int = list(map(int, d_array))
-            buffer = buffer[buffer.rfind(digits[-1]) + len(digits[-1]):]
+            if digits:
+                buffer = buffer[buffer.rfind(digits[-1]) + len(digits[-1]):]
+            else:
+                buffer = ''
 
         if not d_array:
             print('Не найдено цифр удовлетворяющих заданию или цифр нет вообще')
